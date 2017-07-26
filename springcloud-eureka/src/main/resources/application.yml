@@ -1,0 +1,18 @@
+server:
+  port: 8761
+
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: admin
+
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
