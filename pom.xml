@@ -13,11 +13,11 @@
 
     <modules>
         <module>springcloud-eureka</module>
-        <module>springcloud-user</module>
-        <module>springcloud-user2</module>
         <module>springcloud-movie</module>
         <module>springcloud-ribbon</module>
-        <module>springcloud-ribbon-customizing</module>
+        <module>springcloud-ribbon-property</module>
+        <module>springcloud-ribbon-without-eureka</module>
+        <module>springcloud-user</module>
     </modules>
 
     <properties>

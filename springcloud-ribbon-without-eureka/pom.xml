@@ -10,12 +10,12 @@
     </parent>
 
     <groupId>com.xuliugen.springcloud</groupId>
-    <artifactId>springcloud-user2</artifactId>
+    <artifactId>springcloud-ribbon-without-eureka</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>springcloud-user2</name>
-    <description>Demo project for Spring Boot</description>
+    <name>springcloud-ribbon-without-eureka</name>
+    <description>Demo project for Spring Boot</description>>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -28,14 +28,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <!--已经包含了ribbon-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
-        </dependency>
-        <!--监控和管理生产环境-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
+            <artifactId>spring-cloud-starter-eureka-server</artifactId>
         </dependency>
 
         <dependency>
