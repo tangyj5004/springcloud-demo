@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: user-server-consumer-ribbon-property
+
+server:
+  port: 9091
+
+eureka-server:
+  hostname: 127.0.0.1
+  port: 8761
+  security:
+    user:
+      name: admin
+      password: admin
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka-server.security.user.name}:${eureka-server.security.user.password}@${eureka-server.hostname}:${eureka-server.port}/eureka/
+  instance:
+    prefer-ip-address: true
+
+#通过配置文件配置负载均衡的规则
+user-server-provider:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule

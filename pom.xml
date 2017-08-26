@@ -12,15 +12,14 @@
     <description>Demo project for Spring Boot</description>
 
     <modules>
-        <module>springcloud-eureka-server-discovery</module>
-        <module>springcloud-user-server-consumer-ribbon-customizing</module>
-        <module>springcloud-movie-server-provider</module>
-        <module>springcloud-user-server-consumer-feign</module>
-        <module>springcloud-user-server-consumer-feign-customizing</module>
-        <module>springcloud-user-server-consumer-ribbon-simple</module>
-        <module>springcloud-user-server-consumer-ribbon-property</module>
-        <module>springcloud-user-server-consumer-ribbon-without-eureka</module>
-        <module>springcloud-user-server-provider</module>
+        <module>eureka-server-discovery</module>
+        <module>user-server-consumer-ribbon-customizing</module>
+        <module>user-server-consumer-feign</module>
+        <module>user-server-consumer-feign-customizing</module>
+        <module>user-server-consumer-ribbon-simple</module>
+        <module>user-server-consumer-ribbon-property</module>
+        <module>user-server-consumer-ribbon-without-eureka</module>
+        <module>user-server-provider</module>
     </modules>
 
     <properties>
