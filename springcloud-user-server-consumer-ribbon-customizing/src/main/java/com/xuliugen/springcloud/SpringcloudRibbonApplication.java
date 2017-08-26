@@ -9,6 +9,9 @@ import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.FilterType;
 
+/**
+ * 使用Java代码配置路由规则
+ */
 @SpringBootApplication
 @EnableEurekaClient
 //@ComponentScan(excludeFilters = @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = FooConfiguration.class))

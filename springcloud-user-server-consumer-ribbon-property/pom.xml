@@ -10,12 +10,12 @@
     </parent>
 
     <groupId>com.xuliugen.springcloud</groupId>
-    <artifactId>springcloud-ribbon-without-eureka</artifactId>
+    <artifactId>springcloud-user-server-consumer-ribbon-property</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>springcloud-ribbon-without-eureka</name>
-    <description>Demo project for Spring Boot</description>>
+    <name>springcloud-user-server-consumer-ribbon-property</name>
+    <description>Demo project for Spring Boot</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

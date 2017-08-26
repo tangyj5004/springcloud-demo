@@ -6,7 +6,7 @@
     <groupId>com.xuliugen.springcloud</groupId>
     <artifactId>springcloud-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>springcloud-demo</name>
     <description>Demo project for Spring Boot</description>
@@ -16,7 +16,7 @@
         <module>springcloud-user-server-consumer-ribbon-customizing</module>
         <module>springcloud-movie-server-provider</module>
         <module>springcloud-user-server-consumer-ribbon-simple</module>
-        <module>springcloud-ribbon-without-eureka</module>
+        <module>springcloud-user-server-consumer-ribbon-property</module>
         <module>springcloud-user-server-provider</module>
     </modules>
 
