@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: springcloud-user-server-consumer-ribbon-without-eureka
+
+server:
+  port: 9092
+
+eureka-server:
+  hostname: 127.0.0.1
+  port: 8761
+  security:
+    user:
+      name: admin
+      password: admin
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka-server.security.user.name}:${eureka-server.security.user.password}@${eureka-server.hostname}:${eureka-server.port}/eureka/
+  instance:
+    prefer-ip-address: true
+
+#Ribbon不使用Eureka
+ribbon:
+  eureka:
+   enabled: false
+
+#Ribbon使用的springcloud-user-server-provider微服务列表
+springcloud-user-server-provider:
+  ribbon:
+    listOfServers: locolhost:8085

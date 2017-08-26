@@ -15,8 +15,11 @@
         <module>springcloud-eureka-server-discovery</module>
         <module>springcloud-user-server-consumer-ribbon-customizing</module>
         <module>springcloud-movie-server-provider</module>
+        <module>springcloud-user-server-consumer-feign</module>
+        <module>springcloud-user-server-consumer-feign-customizing</module>
         <module>springcloud-user-server-consumer-ribbon-simple</module>
         <module>springcloud-user-server-consumer-ribbon-property</module>
+        <module>springcloud-user-server-consumer-ribbon-without-eureka</module>
         <module>springcloud-user-server-provider</module>
     </modules>
 

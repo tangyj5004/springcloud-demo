@@ -8,7 +8,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * 简单的服务消费方式，如果不配置服务消费的规则的话
+ * 简单的服务消费方式，如果不配置服务消费的规则的话;
+ * Eureka负责服务的注册与发现，Ribbon负责服务的消费，默认情况下Eureka已经集成了Ribbon的功能，因此只需要引用Eureka之后即可以进行消费
  */
 @SpringBootApplication
 @EnableEurekaClient

@@ -26,9 +26,9 @@ public class UserController {
     }
 
     @GetMapping(value = "/{id}")
-    public User getById(@PathVariable String id) {
+    public User getById(@PathVariable("id") String id) {
         System.out.println("user-------");
-        return new User("id:1", "xuliugen", "123456", "male", 24);
+        return new User("id：" + id, "xuliugen", "123456", "male", 24);
     }
 
 }
