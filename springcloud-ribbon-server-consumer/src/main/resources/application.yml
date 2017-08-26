@@ -1,6 +1,6 @@
 spring:
   application:
-    name: springcloud-movie-ribbon
+    name: springcloud-ribbon-server-consumer
 
 server:
   port: 8083

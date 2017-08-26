@@ -25,24 +25,25 @@ public class RibbonController {
 
     @GetMapping(value = "/{id}")
     public User getById(@PathVariable String id) {
-        return this.restTemplate.getForObject("http://springcloud-user/user/" + id, User.class);
+        // 使用默认配置的时候的使用方式
+        return this.restTemplate.getForObject("http://springcloud-user-server-provider/user/" + id, User.class);
     }
 
     @GetMapping(value = "/loadBalancerClient")
     public void loadBalancerClient() {
-        ServiceInstance serviceInstance = loadBalancerClient.choose("springcloud-user");
+        ServiceInstance serviceInstance = loadBalancerClient.choose("springcloud-user-server-provider");
+        //192.168.1.213:8084
         //192.168.1.213:8081
+        //192.168.1.213:8084
         //192.168.1.213:8084
         //192.168.1.213:8081
         //192.168.1.213:8084
         //192.168.1.213:8081
         //192.168.1.213:8084
         //192.168.1.213:8081
-        //192.168.1.213:8084
         //192.168.1.213:8081
         //192.168.1.213:8084
         //192.168.1.213:8081
-        //192.168.1.213:8084
         System.out.println(serviceInstance.getHost() + ":" + serviceInstance.getPort());
     }
 

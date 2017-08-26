@@ -14,37 +14,31 @@ import org.springframework.web.client.RestTemplate;
  * Created by xuliugen on 2017/7/26.
  */
 @RestController
-@RequestMapping(value = "/ribbon")
-public class RibbonController {
+@RequestMapping(value = "/user/simple")
+public class UserController {
 
-    @Autowired
+    @Autowired //已经支持负载均衡的
     private RestTemplate restTemplate;
 
     @Autowired
     private LoadBalancerClient loadBalancerClient;
 
+    /**
+     * 使用硬编码的方式消费服务
+     * @param id
+     * @return
+     */
     @GetMapping(value = "/{id}")
     public User getById(@PathVariable String id) {
-        // 使用默认配置的时候的使用方式
-        // return this.restTemplate.getForObject("http://springcloud-user/user/" + id, User.class);
-        return this.restTemplate.getForObject("http://springcloud-user/user/" + id, User.class);
+        return this.restTemplate.getForObject("http://springcloud-user-server-provider/user/" + id, User.class);
     }
 
+    /**
+     * 使用负载均衡的方式显示消费的那一他主机的服务
+     */
     @GetMapping(value = "/loadBalancerClient")
     public void loadBalancerClient() {
-        ServiceInstance serviceInstance = loadBalancerClient.choose("springcloud-user");
-        //192.168.1.213:8084
-        //192.168.1.213:8081
-        //192.168.1.213:8084
-        //192.168.1.213:8084
-        //192.168.1.213:8081
-        //192.168.1.213:8084
-        //192.168.1.213:8081
-        //192.168.1.213:8084
-        //192.168.1.213:8081
-        //192.168.1.213:8081
-        //192.168.1.213:8084
-        //192.168.1.213:8081
+        ServiceInstance serviceInstance = loadBalancerClient.choose("springcloud-user-server-provider");
         System.out.println(serviceInstance.getHost() + ":" + serviceInstance.getPort());
     }
 

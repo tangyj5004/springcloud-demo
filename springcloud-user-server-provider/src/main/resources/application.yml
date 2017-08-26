@@ -3,7 +3,7 @@ spring:
     name: springcloud-user-server-provider
 
 server:
-  port: 8083
+  port: 8084
 
 eureka-server:
   hostname: 127.0.0.1
@@ -15,10 +15,10 @@ eureka-server:
 
 eureka:
   client:
-    service-url:
+    service-url: #Eureka服务的地址
       defaultZone: http://${eureka-server.security.user.name}:${eureka-server.security.user.password}@${eureka-server.hostname}:${eureka-server.port}/eureka/
   instance:
-    prefer-ip-address: true
-#    instance-id: ${spring.application.name}:${server.port}
+    prefer-ip-address: true #在Eureka注册管理界面上显示微服务真是的IP地址
+    #instance-id: ${spring.application.name}:${server.port}  #定制Eureka注册管理界面上显示的实例名称
     status-page-url-path: ${eureka-server.hostname}:${eureka-server.port}/info
     health-check-url-path: ${eureka-server.hostname}:${eureka-server.port}/health

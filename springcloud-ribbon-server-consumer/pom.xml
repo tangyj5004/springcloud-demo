@@ -10,11 +10,11 @@
     </parent>
 
     <groupId>com.xuliugen.springcloud</groupId>
-    <artifactId>springcloud-ribbon-property</artifactId>
+    <artifactId>springcloud-ribbon-server-consumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>springcloud-ribbon-property</name>
+    <name>springcloud-ribbon-server-consumer</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

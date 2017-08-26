@@ -1,21 +1,18 @@
 package com.xuliugen.springcloud;
 
-import com.xuliugen.springcloud.config.FooConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.FilterType;
 import org.springframework.web.client.RestTemplate;
 
+/**
+ * 简单的服务消费方式，如果不配置服务消费的规则的话
+ */
 @SpringBootApplication
 @EnableEurekaClient
-@ComponentScan(excludeFilters = @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = FooConfiguration.class))
-@RibbonClient(name = "springcloud-user", configuration = FooConfiguration.class)
-public class SpringcloudRibbonApplication {
+public class SpringcloudApplication {
 
     @Bean
     @LoadBalanced
@@ -24,6 +21,6 @@ public class SpringcloudRibbonApplication {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringcloudRibbonApplication.class, args);
+        SpringApplication.run(SpringcloudApplication.class, args);
     }
 }

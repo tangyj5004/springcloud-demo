@@ -1,6 +1,6 @@
 spring:
   application:
-    name: springcloud-ribbon-customizing
+    name: springcloud-user-server-consumer-ribbon-simple
 
 server:
   port: 8085
@@ -20,7 +20,7 @@ eureka:
   instance:
     prefer-ip-address: true
 
-#通过配置文件配置rule
-springcloud-user:
-  ribbon:
-    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule
+#通过配置文件配置负载均衡的规则
+#springcloud-user-server-provider:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule
