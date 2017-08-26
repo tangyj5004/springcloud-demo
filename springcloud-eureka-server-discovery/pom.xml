@@ -10,11 +10,11 @@
     </parent>
 
     <groupId>com.xuliugen.springcloud</groupId>
-    <artifactId>springcloud-user</artifactId>
+    <artifactId>springcloud-eureka-server-discovery</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>springcloud-user</name>
+    <name>springcloud-eureka-server-discovery</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -24,24 +24,15 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+        <!--Eureka服务发现依赖-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
+            <artifactId>spring-cloud-starter-eureka-server</artifactId>
         </dependency>
-        <!--监控和管理生产环境-->
+        <!--服务发现使用到的security-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
     </dependencies>
 
@@ -53,6 +44,5 @@
             </plugin>
         </plugins>
     </build>
-
 
 </project>
