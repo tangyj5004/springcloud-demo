@@ -20,3 +20,10 @@ eureka:
   instance:
     prefer-ip-address: true
 
+
+#设置Feign的日志
+logging:
+  level:
+    com.xuliugen.springcloud: DEBUG
+
+
