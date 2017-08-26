@@ -10,11 +10,11 @@
     </parent>
 
     <groupId>com.xuliugen.springcloud</groupId>
-    <artifactId>springcloud-ribbon-server-consumer</artifactId>
+    <artifactId>springcloud-user-server-consumer-ribbon-customizing</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>springcloud-ribbon-server-consumer</name>
+    <name>springcloud-user-server-consumer-ribbon-customizing</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

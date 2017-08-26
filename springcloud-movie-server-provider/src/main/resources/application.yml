@@ -1,9 +1,9 @@
 spring:
   application:
-    name: springcloud-ribbon-server-consumer
+    name: springcloud-movie-server-provider
 
 server:
-  port: 8083
+  port: 9010
 
 eureka-server:
   hostname: 127.0.0.1
@@ -19,3 +19,6 @@ eureka:
       defaultZone: http://${eureka-server.security.user.name}:${eureka-server.security.user.password}@${eureka-server.hostname}:${eureka-server.port}/eureka/
   instance:
     prefer-ip-address: true
+#    instance-id: ${spring.application.name}:${server.port}
+    status-page-url-path: ${eureka-server.hostname}:${eureka-server.port}/info
+    health-check-url-path: ${eureka-server.hostname}:${eureka-server.port}/health

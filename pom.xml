@@ -13,8 +13,8 @@
 
     <modules>
         <module>springcloud-eureka-server-discovery</module>
-        <module>springcloud-movie</module>
-        <module>springcloud-ribbon-server-consumer</module>
+        <module>springcloud-user-server-consumer-ribbon-customizing</module>
+        <module>springcloud-movie-server-provider</module>
         <module>springcloud-user-server-consumer-ribbon-simple</module>
         <module>springcloud-ribbon-without-eureka</module>
         <module>springcloud-user-server-provider</module>
