@@ -1,0 +1,42 @@
+#eureka-server-discovery
+
+>1、application-standalone.yml配置的是单一的注册中心；
+
+>2、application-peer1.yml和application-peer2.yml 分别是构造两台机器的Eureka高可用注册中心；
+
+>3、在两个Eureka高可用实例中peer1的注册中心指向了peer2，peer2的注册中心指向了peer1，这样就可以相互注册，现实的结果中：在peer1可以看到
+    peer2的注册信息，在peer2可以看到peer1的注册信息；
+
+>4、在进行项目打包的时候，要注意使用的plugin为如下：
+
+```
+    <build>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
+                    <configuration>
+                        <maimClass>com.xuliugen.springcloud.EurekaServerDiscoveryApplication</maimClass>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>repackage</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </build>
+```
+
+5、启动两个peer的命令，在编译好的target目录中使用如下命令：
+
+```
+java -jar eureka-server-discovery-0.0.1-SNAPSHOT.jar  --spring.profiles.active=peer1
+```
+
+```
+java -jar eureka-server-discovery-0.0.1-SNAPSHOT.jar  --spring.profiles.active=peer2
+```

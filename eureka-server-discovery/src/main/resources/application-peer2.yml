@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: eureka-server-2
+
+server:
+  port: 1112
+
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: admin
+
+#需要注册到哪一个Eureka注册中心的自定义配置信息
+eureka-server1:
+  instance:
+    hostname: 127.0.0.1 #这个实际是eureka-server-1的IP地址
+    port: 1111
+
+#将该Eureka注册中心注册到另一个注册中心，进行相互注册形成高可用注册中心
+eureka:
+  instance:
+    hostname: 127.0.0.1 #或者是eureka-server-2，这个是代表该注册中心的hostname，eureka-server-2要修改hosts文件
+  client:
+    service-url:
+      defaultZone: http://${security.user.name}:${security.user.password}@${eureka-server1.instance.hostname}:${eureka-server1.instance.port}/eureka/
