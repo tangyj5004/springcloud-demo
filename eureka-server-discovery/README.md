@@ -3,6 +3,13 @@
 >1、application-standalone.yml配置的是单一的注册中心；
 
 >2、application-peer1.yml和application-peer2.yml 分别是构造两台机器的Eureka高可用注册中心；
+    并且application name要一样，这样的话才会是在一个分片上：
+
+```
+    spring:
+      application:
+        name: eureka-server
+```
 
 >3、在两个Eureka高可用实例中peer1的注册中心指向了peer2，peer2的注册中心指向了peer1，这样就可以相互注册，现实的结果中：在peer1可以看到
     peer2的注册信息，在peer2可以看到peer1的注册信息；
@@ -40,3 +47,20 @@ java -jar eureka-server-discovery-0.0.1-SNAPSHOT.jar  --spring.profiles.active=p
 ```
 java -jar eureka-server-discovery-0.0.1-SNAPSHOT.jar  --spring.profiles.active=peer2
 ```
+
+6、最后的结果访问eureka界面，会分别显示两个eureka实例：
+
+<table class="table table-bordered table-striped table-condensed">  
+    <tr>  
+        <td>﻿Application</td>  
+        <td>﻿AMIs</td>  
+        <td>﻿Availability Zones</td>  
+        <td>﻿Statuss</td>  
+    </tr>  
+    <tr>  
+        <td>﻿EUREKA-SERVER</td>  
+        <td>﻿n/a (2)</td>  
+        <td>﻿(2)</td>  
+        <td>﻿UP (2) - 192.168.1.108:eureka-server:1111 , 192.168.1.108:eureka-server:1112</td>  
+    </tr>  
+</table>

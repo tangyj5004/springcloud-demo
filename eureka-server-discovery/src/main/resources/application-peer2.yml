@@ -1,6 +1,6 @@
 spring:
   application:
-    name: eureka-server-2
+    name: eureka-server
 
 server:
   port: 1112
