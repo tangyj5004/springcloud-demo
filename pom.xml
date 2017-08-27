@@ -12,7 +12,8 @@
     <description>Demo project for Spring Boot</description>
 
     <modules>
-        <module>eureka-server-discovery</module>
+        <module>eureka-server-discovery-peer</module>
+        <module>eureka-server-discovery-standalone</module>
         <module>user-server-consumer-ribbon-customizing</module>
         <module>user-server-consumer-feign</module>
         <module>user-server-consumer-feign-customizing</module>

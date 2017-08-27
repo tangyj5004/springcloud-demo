@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: user-server-provider
+
+server:
+  port: 8085
+
+eureka-server1:
+  hostname: eureka-server1
+  port: 1111
+  security:
+    user:
+      name: admin
+      password: admin
+
+eureka-server2:
+  hostname: eureka-server2
+  port: 1112
+  security:
+    user:
+      name: admin
+      password: admin
+
+eureka:
+  client:
+    service-url: #Eureka服务的地址
+      defaultZone: http://${eureka-server1.security.user.name}:${eureka-server1.security.user.password}@${eureka-server1.hostname}:${eureka-server1.port}/eureka/,http://${eureka-server2.security.user.name}:${eureka-server2.security.user.password}@${eureka-server2.hostname}:${eureka-server2.port}/eureka/
+  instance:
+    prefer-ip-address: true #在Eureka注册管理界面上显示微服务真是的IP地址
+    #instance-id: ${spring.application.name}:${server.port}  #定制Eureka注册管理界面上显示的实例名称
+    status-page-url-path: ${eureka-server.hostname}:${eureka-server.port}/info
+    health-check-url-path: ${eureka-server.hostname}:${eureka-server.port}/health

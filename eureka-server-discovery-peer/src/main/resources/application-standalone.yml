@@ -16,3 +16,4 @@ eureka:
     fetch-registry: false #eureka服务发现的话，就不需要在这里注册，不要作为Eureka Client，而是Eureka Server
     service-url: #将Eureka注册到指定的url
       defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
+

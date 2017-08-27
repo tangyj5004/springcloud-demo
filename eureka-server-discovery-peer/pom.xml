@@ -34,6 +34,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
+        <!--监控和管理生产环境-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -42,9 +47,9 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
-                <configuration>
-                    <maimClass>com.xuliugen.springcloud.EurekaServerDiscoveryApplication</maimClass>
-                </configuration>
+                <!--<configuration>-->
+                    <!--<maimClass>com.xuliugen.springcloud.EurekaServerDiscoveryApplication</maimClass>-->
+                <!--</configuration>-->
                 <executions>
                     <execution>
                         <goals>
