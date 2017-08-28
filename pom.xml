@@ -19,6 +19,7 @@
         <module>springboot-demo</module>
         <module>user-server-consumer-feign-customizing</module>
         <module>user-server-consumer-ribbon-simple</module>
+        <module>user-server-consumer-ribbon-with-hyxstrix</module>
         <module>user-server-consumer-ribbon-property</module>
         <module>user-server-consumer-ribbon-without-eureka</module>
         <module>user-server-provider</module>
@@ -73,6 +74,12 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-commons</artifactId>
             <version>RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.18</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 

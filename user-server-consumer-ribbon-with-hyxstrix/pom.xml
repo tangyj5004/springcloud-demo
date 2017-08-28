@@ -10,11 +10,11 @@
     </parent>
 
     <groupId>com.xuliugen.springcloud</groupId>
-    <artifactId>user-server-provider</artifactId>
+    <artifactId>user-server-consumer-ribbon-with-hyxstrix</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>user-server-provider</name>
+    <name>user-server-consumer-ribbon-simple</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -28,14 +28,15 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <!--已经包含了ribbon-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
-        <!--监控和管理生产环境-->
+
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
         </dependency>
 
         <dependency>
@@ -50,17 +51,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring-boot.version}</version>
-                <!--<configuration>-->
-                    <!--<maimClass>com.xuliugen.springcloud.UserServerProviderApplication</maimClass>-->
-                <!--</configuration>-->
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>
