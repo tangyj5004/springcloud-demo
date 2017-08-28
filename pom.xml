@@ -16,6 +16,7 @@
         <module>eureka-server-discovery-standalone</module>
         <module>user-server-consumer-ribbon-customizing</module>
         <module>user-server-consumer-feign</module>
+        <module>springboot-demo</module>
         <module>user-server-consumer-feign-customizing</module>
         <module>user-server-consumer-ribbon-simple</module>
         <module>user-server-consumer-ribbon-property</module>
