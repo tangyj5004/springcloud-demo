@@ -1,9 +1,9 @@
 spring:
   application:
-    name: user-server-consumer-feign-without-hyxstrix
+    name: user-server-consumer-feign-with-hystrix
 
 server:
-  port: 9081
+  port: 9080
 
 eureka-server:
   hostname: 127.0.0.1

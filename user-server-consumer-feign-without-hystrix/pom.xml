@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.xuliugen.springcloud</groupId>
-    <artifactId>user-server-consumer-feign-without-hyxstrix</artifactId>
+    <artifactId>user-server-consumer-feign-without-hystrix</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>user-server-consumer-feign-without-hyxstrix</name>
-    <description>user-server-consumer-feign-without-hyxstrix</description>
+    <name>user-server-consumer-feign-without-hystrix</name>
+    <description>user-server-consumer-feign-without-hystrix</description>
 
     <parent>
         <groupId>com.xuliugen.springcloud</groupId>

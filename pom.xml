@@ -14,15 +14,15 @@
     <modules>
         <module>eureka-server-discovery-peer</module>
         <module>eureka-server-discovery-standalone</module>
+        <module>springboot-demo</module>
         <module>user-server-consumer-ribbon-customizing</module>
         <module>user-server-consumer-feign</module>
-        <module>springboot-demo</module>
         <module>user-server-consumer-feign-customizing</module>
-        <module>user-server-consumer-feign-with-hyxstrix</module>
-        <module>user-server-consumer-feign-without-hyxstrix</module>
+        <module>user-server-consumer-feign-with-hystrix</module>
+        <module>user-server-consumer-feign-without-hystrix</module>
         <module>user-server-consumer-ribbon-simple</module>
-        <module>user-server-consumer-ribbon-with-hyxstrix</module>
-        <module>user-server-consumer-ribbon-with-hyxstrix-propagation</module>
+        <module>user-server-consumer-ribbon-with-hystrix</module>
+        <module>user-server-consumer-ribbon-with-hystrix-propagation</module>
         <module>user-server-consumer-ribbon-property</module>
         <module>user-server-consumer-ribbon-without-eureka</module>
         <module>user-server-provider</module>

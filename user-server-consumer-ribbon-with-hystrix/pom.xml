@@ -10,12 +10,12 @@
     </parent>
 
     <groupId>com.xuliugen.springcloud</groupId>
-    <artifactId>user-server-consumer-ribbon-with-hyxstrix-propagation</artifactId>
+    <artifactId>user-server-consumer-ribbon-with-hystrix</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>user-server-consumer-ribbon-with-hyxstrix-propagation</name>
-    <description>Demo project for Spring Boot</description>
+    <name>user-server-consumer-ribbon-with-hystrix</name>
+    <description>user-server-consumer-ribbon-with-hystrix</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

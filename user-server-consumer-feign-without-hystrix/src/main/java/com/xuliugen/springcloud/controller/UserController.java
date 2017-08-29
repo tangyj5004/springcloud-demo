@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  * Created by xuliugen on 2017/7/26.
  */
 @RestController
-@RequestMapping(value = "/user/feign-with-hyxstrix")
+@RequestMapping(value = "/user/feign-with-hystrix")
 public class UserController {
 
     @Autowired
