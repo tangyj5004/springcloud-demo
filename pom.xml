@@ -15,6 +15,7 @@
         <module>eureka-server-discovery-peer</module>
         <module>eureka-server-discovery-standalone</module>
         <module>hystrix-server-dashboard</module>
+        <module>hystrix-server-turbine</module>
         <module>springboot-demo</module>
         <module>user-server-consumer-ribbon-customizing</module>
         <module>user-server-consumer-feign</module>

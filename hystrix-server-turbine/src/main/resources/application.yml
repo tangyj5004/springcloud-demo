@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: hystrix-server-turbine
+
+server:
+  port: 8061
+
+eureka-server:
+  hostname: 127.0.0.1
+  port: 8761
+  security:
+    user:
+      name: admin
+      password: admin
+
+#需要把Turbine注册到Eureka上
+eureka:
+  client:
+    service-url: #Eureka服务的地址
+      defaultZone: http://${eureka-server.security.user.name}:${eureka-server.security.user.password}@${eureka-server.hostname}:${eureka-server.port}/eureka/
+  instance:
+    prefer-ip-address: true #在Eureka注册管理界面上显示微服务真是的IP地址
+
+#监控一种实例的配置
+#turbine:
+#  aggregator:
+#    clusterConfig: USER-SERVER-CONSUMER-FEIGN-WITH-HYSTRIX
+#  appConfig: user-server-consumer-feign-with-hystrix
+
+
+#监控多个实例的配置,第一种方式
+#turbine:
+#  aggregator:
+#    clusterConfig: USER-SERVER-CONSUMER-FEIGN-WITH-HYSTRIX,USER-SERVER-CONSUMER-RIBBON-WITH-HYSTRIX
+#  appConfig: user-server-consumer-feign-with-hystrix,user-server-consumer-ribbon-with-hystrix
+
+
+#监控多个实例的配置,第二种方式
+turbine:
+  aggregator:
+    clusterConfig: default
+  appConfig: user-server-consumer-feign-with-hystrix,user-server-consumer-ribbon-with-hystrix # 需要监控的集群列表
+  clusterNameExpression: "'default'"

@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableCircuitBreaker
-public class SpringcloudHyxstricApplication {
+public class RibbonWithHystrixApplication {
 
     @Bean
     @LoadBalanced
@@ -20,6 +20,6 @@ public class SpringcloudHyxstricApplication {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringcloudHyxstricApplication.class, args);
+        SpringApplication.run(RibbonWithHystrixApplication.class, args);
     }
 }

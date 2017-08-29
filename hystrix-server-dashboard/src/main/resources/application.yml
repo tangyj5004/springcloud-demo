@@ -1,7 +1,2 @@
 server:
   port: 8060
-
-#要开启hystrix，这里在主类中通过注解@EnableHystrix实现了
-#feign:
-#  hystrix:
-#    enabled: true

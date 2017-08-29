@@ -1,9 +1,9 @@
 spring:
   application:
-    name: user-server-consumer-with-hyxstric
+    name: user-server-consumer-ribbon-with-hystrix
 
 server:
-  port: 9001
+  port: 9006
 
 eureka-server:
   hostname: 127.0.0.1
@@ -15,13 +15,18 @@ eureka-server:
 
 eureka:
   client:
+    fetch-registry: true
+    register-with-eureka: true
+    registry-fetch-interval-seconds: 1
+    healthcheck.enabled: true
     service-url:
       defaultZone: http://${eureka-server.security.user.name}:${eureka-server.security.user.password}@${eureka-server.hostname}:${eureka-server.port}/eureka/
   instance:
     prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 1  #租期更新时间间隔（默认30秒）
+    lease-expiration-duration-in-seconds: 1  #租期到期时间（默认90秒）
 
 #第一次访问之行超时，默认超时时间是1s,这里配置为5秒；或者世界使用下边的配置，设置为禁用
 #hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
 #禁止使用hystrix的超时设置
-hystrix.command.default.execution.timeout.enabled: false
-#feign.hystrix.enable: false #禁止Feign使用hystrix
+#hystrix.command.default.execution.timeout.enabled: false
