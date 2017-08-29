@@ -17,6 +17,9 @@ eureka-server:
 
 eureka:
   client:
+    fetch-registry: true
+    register-with-eureka: true
+    registry-fetch-interval-seconds: 1 #默认30秒，Indicates how often(in seconds) to fetch the registry information from the eureka server.
     healthcheck.enabled: true
     service-url: #Eureka服务的地址
       defaultZone: http://${eureka-server.security.user.name}:${eureka-server.security.user.password}@${eureka-server.hostname}:${eureka-server.port}/eureka/

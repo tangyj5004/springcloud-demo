@@ -8,15 +8,16 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
 /**
  * 使用Feign和Hyxstric的结合
- * FallbackFactory和Fallback不可同时使用
+ * 一个Client使用Hyxstric一个不使用
  */
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients
 @EnableCircuitBreaker  //开启Hyxstric的自动配置
-public class FeignWithHyxstricApplication {
+//@ComponentScan(excludeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, value = WithoutHyxstricAnnotation.class))
+public class FeignWithoutHyxstricApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(FeignWithHyxstricApplication.class, args);
+        SpringApplication.run(FeignWithoutHyxstricApplication.class, args);
     }
 }

@@ -9,15 +9,14 @@ import org.springframework.stereotype.Component;
  * Created by xuliugen on 2017/8/29.
  */
 @Component
-public class HystrixClientFallbackFactory implements FallbackFactory<HystrixClient> {
+public class HelloClientFallbackFactory implements FallbackFactory<HelloClient> {
 
     @Override
-    public HystrixClient create(final Throwable cause) {
+    public HelloClient create(final Throwable cause) {
 
-        return new HystrixClient() {
+        return new HelloClient() {
             @Override
             public User getById(String id) {
-                System.out.println("error message:" + cause.getCause());
                 return new User();
             }
         };

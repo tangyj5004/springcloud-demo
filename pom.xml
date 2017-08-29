@@ -19,6 +19,7 @@
         <module>springboot-demo</module>
         <module>user-server-consumer-feign-customizing</module>
         <module>user-server-consumer-feign-with-hyxstrix</module>
+        <module>user-server-consumer-feign-without-hyxstrix</module>
         <module>user-server-consumer-ribbon-simple</module>
         <module>user-server-consumer-ribbon-with-hyxstrix</module>
         <module>user-server-consumer-ribbon-with-hyxstrix-propagation</module>
