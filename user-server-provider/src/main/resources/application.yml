@@ -27,4 +27,4 @@ eureka:
     status-page-url-path: ${eureka-server.hostname}:${eureka-server.port}/info
     health-check-url-path: ${eureka-server.hostname}:${eureka-server.port}/health
     lease-renewal-interval-in-seconds: 1  #租期更新时间间隔（默认30秒）
-    lease-expiration-duration-in-seconds: 3  #租期到期时间（默认90秒）
+    lease-expiration-duration-in-seconds: 1  #租期到期时间（默认90秒）

@@ -15,7 +15,22 @@ eureka-server:
 
 eureka:
   client:
+    fetch-registry: true
+    register-with-eureka: true
+    registry-fetch-interval-seconds: 1 #默认30秒，Indicates how often(in seconds) to fetch the registry information from the eureka server.
+    healthcheck.enabled: true
     service-url:
       defaultZone: http://${eureka-server.security.user.name}:${eureka-server.security.user.password}@${eureka-server.hostname}:${eureka-server.port}/eureka/
   instance:
     prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 1  #租期更新时间间隔（默认30秒）
+    lease-expiration-duration-in-seconds: 1 #租期到期时间（默认90秒）
+
+logging:
+  level: debug
+
+#用的是Dalston版本，请注意：Feign对Hystrix的支持默认是关闭的，如果想开启对Hystrix的支持
+#Camden版本默认Feign对Hystrix的支持是开启的
+feign:
+  hystrix:
+    enabled: true
