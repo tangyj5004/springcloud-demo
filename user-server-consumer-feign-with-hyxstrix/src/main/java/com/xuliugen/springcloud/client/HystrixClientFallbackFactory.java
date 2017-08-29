@@ -17,7 +17,7 @@ public class HystrixClientFallbackFactory implements FallbackFactory<HystrixClie
         return new HystrixClient() {
             @Override
             public User getById(String id) {
-                System.out.println(cause.getMessage());
+                System.out.println("error message:" + cause.getCause());
                 return new User();
             }
         };
