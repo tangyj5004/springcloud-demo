@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Created by xuliugen on 2017/8/26.
  */
 @FeignClient(name = "user-server-provider", fallback = UserHystrixClientFallback.class)
-public interface UserFeignHyxstrixClient {
+public interface UserFeignHystrixClient {
 
     @RequestMapping(method = RequestMethod.GET, value = "/user/{id}")
     User getById(@PathVariable("id") String id);

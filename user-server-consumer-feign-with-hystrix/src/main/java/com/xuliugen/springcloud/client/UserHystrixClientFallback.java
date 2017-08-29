@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
  * Created by xuliugen on 2017/8/29.
  */
 @Component
-public class UserHystrixClientFallback implements UserFeignHyxstrixClient {
+public class UserHystrixClientFallback implements UserFeignHystrixClient {
 
     @Override
     public User getById(String id) {

@@ -14,9 +14,9 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 @EnableEurekaClient
 @EnableFeignClients
 @EnableCircuitBreaker  //开启Hyxstric的自动配置
-public class FeignWithHyxstricApplication {
+public class FeignWithHystrixApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(FeignWithHyxstricApplication.class, args);
+        SpringApplication.run(FeignWithHystrixApplication.class, args);
     }
 }
