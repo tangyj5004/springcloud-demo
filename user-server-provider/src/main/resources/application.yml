@@ -5,7 +5,7 @@ spring:
     active: true
 
 server:
-  port: 8085
+  port: 8086
 
 eureka-server:
   hostname: 127.0.0.1
