@@ -16,6 +16,8 @@
         <module>eureka-server-discovery-standalone</module>
         <module>hystrix-server-dashboard</module>
         <module>hystrix-server-turbine</module>
+        <module>hystrix-server-turbine-use-context</module>
+        <module>hystrix-server-turbine-use-management</module>
         <module>springboot-demo</module>
         <module>user-server-consumer-ribbon-customizing</module>
         <module>user-server-consumer-feign</module>
@@ -25,6 +27,8 @@
         <module>user-server-consumer-ribbon-simple</module>
         <module>user-server-consumer-ribbon-with-hystrix</module>
         <module>user-server-consumer-ribbon-with-hystrix-propagation</module>
+        <module>user-server-consumer-ribbon-with-hystrix-use-context</module>
+        <module>user-server-consumer-ribbon-with-hystrix-use-management</module>
         <module>user-server-consumer-ribbon-property</module>
         <module>user-server-consumer-ribbon-without-eureka</module>
         <module>user-server-provider</module>

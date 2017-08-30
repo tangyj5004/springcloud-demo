@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: user-server-consumer-ribbon-with-hystrix-use-management
+
+management: #spring-boot-starter-actuator使用的端口，hystrix.stream使用的也是8081这个端口
+  port: 8081
+
+server:
+  port: 9010
+#  context-path: /ribbon
+
+eureka-server:
+  hostname: 127.0.0.1
+  port: 8761
+  security:
+    user:
+      name: admin
+      password: admin
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    registry-fetch-interval-seconds: 1
+    healthcheck.enabled: true
+    service-url:
+      defaultZone: http://${eureka-server.security.user.name}:${eureka-server.security.user.password}@${eureka-server.hostname}:${eureka-server.port}/eureka/
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 1  #租期更新时间间隔（默认30秒）
+    lease-expiration-duration-in-seconds: 1  #租期到期时间（默认90秒）
+#    home-page-url-path: /ribbon
+    metadata-map:
+      management:
+        port: 8081
+
