@@ -13,6 +13,7 @@
 
     <modules>
         <module>api-gateway-zuul</module>
+        <module>api-gateway-zuul-pattern</module>
         <module>eureka-server-discovery-peer</module>
         <module>eureka-server-discovery-standalone</module>
         <module>hystrix-server-dashboard</module>
