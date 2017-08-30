@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: api-gateway-zuul-fallback
+
+server:
+  port: 8032
+
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: admin
+
+eureka-server:
+  hostname: 127.0.0.1
+  port: 8761
+  security:
+    user:
+      name: admin
+      password: admin
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    registry-fetch-interval-seconds: 1 #默认30秒，Indicates how often(in seconds) to fetch the registry information from the eureka server.
+    healthcheck.enabled: true
+    service-url: #Eureka服务的地址
+      defaultZone: http://${eureka-server.security.user.name}:${eureka-server.security.user.password}@${eureka-server.hostname}:${eureka-server.port}/eureka/
+  instance:
+    prefer-ip-address: true #在Eureka注册管理界面上显示微服务真是的IP地址
+    status-page-url-path: ${eureka-server.hostname}:${eureka-server.port}/info
+    health-check-url-path: ${eureka-server.hostname}:${eureka-server.port}/health
+    lease-renewal-interval-in-seconds: 1  #租期更新时间间隔（默认30秒）
+    lease-expiration-duration-in-seconds: 1  #租期到期时间（默认90秒）
+
+logging:
+  level:
+    root: info
+
+zuul:
+  routes:
+    user-server-provider: /user-provider/**
