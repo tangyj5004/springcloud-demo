@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+#git文件上{application}-dev中的application
+spring:
+  application:
+    name: spring-cloud-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://git.oschina.net/xuliugen/spring-cloud-config #这里类似于公用的，用于回退查找
+          username: 860454115@qq.com
+          password: 1234567....
+          search-paths: configs
+          repos:
+            simple: https://git.oschina.net/xuliugen/spring-cloud-config-simple
+            special:
+              pattern: special*/dev*,*special*/test*
+              uri: https://git.oschina.net/xuliugen/spring-cloud-config-special

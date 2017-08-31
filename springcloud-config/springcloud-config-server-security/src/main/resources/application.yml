@@ -1,0 +1,19 @@
+server:
+  port: 8082
+
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: admin
+
+spring:
+  application:
+    name: spring-cloud-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://git.oschina.net/xuliugen/spring-cloud-config #这里类似于公用的，用于回退查找
+          search-paths: configs
