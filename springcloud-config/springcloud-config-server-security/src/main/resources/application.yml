@@ -17,3 +17,30 @@ spring:
         git:
           uri: https://git.oschina.net/xuliugen/spring-cloud-config #这里类似于公用的，用于回退查找
           search-paths: configs
+
+
+#请求地址：http://localhost:8082/springcloudconfig/dev/master
+#响应结果：
+#{
+#  name: "springcloudconfig",
+#    profiles: [
+#      "dev"
+#    ],
+#    label: "master",
+#    version: "b35671e5862798d571e2a6a6fbacb93ad7191d47",
+#    state: null,
+#    propertySources: [
+#    {
+#      name: "https://git.oschina.net/xuliugen/spring-cloud-config/configs/springcloudconfig-dev.yml",
+#      source: {
+#        profile: "profile-dev"
+#      }
+#    },
+#    {
+#      name: "https://git.oschina.net/xuliugen/spring-cloud-config/configs/springcloudconfig.yml",
+#      source: {
+#        document: "profile:profile"
+#      }
+#    }
+#  ]
+#}

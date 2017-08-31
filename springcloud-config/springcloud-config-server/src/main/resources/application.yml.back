@@ -10,8 +10,6 @@ spring:
       server:
         git:
           uri: https://git.oschina.net/xuliugen/spring-cloud-config #这里类似于公用的，用于回退查找
-          username: 860454115@qq.com
-          password: 1234567....
           search-paths: configs
           repos:
             simple: https://git.oschina.net/xuliugen/spring-cloud-config-simple
