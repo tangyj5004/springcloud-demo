@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: springcloudconfig #对应的配置文件中的{application}部分
+  cloud:
+    config:
+      uri: http://localhost:8080
+      profile: dev
+      label: master #当Config server的后端存储方式为git的时候，默认就是master
+
+
+#Spring Cloud启动的时候默认的会先加载bootstrap.yml文件，然后在加载application.yml文件

@@ -22,6 +22,7 @@
         <module>hystrix-server-turbine</module>
         <module>hystrix-server-turbine-use-context</module>
         <module>hystrix-server-turbine-use-management</module>
+        <module>springcloud-config</module>
         <module>springboot-demo</module>
         <module>user-server-consumer-ribbon-customizing</module>
         <module>user-server-consumer-feign</module>
@@ -43,8 +44,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
 
-        <spring-boot.version>1.4.1.RELEASE</spring-boot.version>
-        <spring-cloud.version>Dalston.SR2</spring-cloud.version>
+        <spring-boot.version>1.5.6.RELEASE</spring-boot.version>
+        <spring-cloud.version>Dalston.SR3</spring-cloud.version>
     </properties>
 
     <dependencyManagement>
@@ -53,7 +54,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>1.4.1.RELEASE</version>
+                <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
