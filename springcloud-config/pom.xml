@@ -21,6 +21,7 @@
         <module>springcloud-config-client</module>
         <module>springcloud-config-client-security</module>
         <module>springcloud-config-server</module>
+        <module>springcloud-config-server-rsa</module>
         <module>springcloud-config-server-security</module>
     </modules>
 
