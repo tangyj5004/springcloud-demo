@@ -37,3 +37,19 @@
 }
 
 ```
+
+>3、另外，还可以这样访问：http://localhost:8080/springcloudconfig-prod.json
+
+```
+{
+    document: "profile:profile",
+    profile: "profile-prod"
+}
+```
+
+>4、http://localhost:8080/springcloudconfig-prod.yml
+
+```
+document: profile:profile
+profile: profile-prod
+```
