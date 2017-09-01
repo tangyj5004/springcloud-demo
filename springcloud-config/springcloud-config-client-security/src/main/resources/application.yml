@@ -1,4 +1,4 @@
 server:
   port: 8084
 
-profile: dev
+#profile: dev
