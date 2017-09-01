@@ -1,0 +1,35 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: springcloud-config-server-with-eureka
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/xuliugen/spring-cloud-config #这里类似于公用的，用于回退查找
+          search-paths: configs
+
+eureka-server:
+  hostname: 127.0.0.1
+  port: 8761
+  security:
+    user:
+      name: admin
+      password: admin
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    registry-fetch-interval-seconds: 1 #默认30秒，Indicates how often(in seconds) to fetch the registry information from the eureka server.
+    healthcheck.enabled: true
+    service-url:
+      defaultZone: http://${eureka-server.security.user.name}:${eureka-server.security.user.password}@${eureka-server.hostname}:${eureka-server.port}/eureka/
+  instance:
+    prefer-ip-address: true #在Eureka注册管理界面上显示微服务真是的IP地址
+    status-page-url-path: ${eureka-server.hostname}:${eureka-server.port}/info
+    health-check-url-path: ${eureka-server.hostname}:${eureka-server.port}/health
+    lease-renewal-interval-in-seconds: 1  #租期更新时间间隔（默认30秒）
+    lease-expiration-duration-in-seconds: 1  #租期到期时间（默认90秒）

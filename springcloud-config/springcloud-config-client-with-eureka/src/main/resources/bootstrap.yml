@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: springcloudconfig #对应的配置文件{application}-dev.yml中的{application}部分
+  cloud:
+    config:
+      profile: dev  #匹配到的配置文件
+      label: master #当Config server的后端存储方式为git的时候，默认就是master
+      discovery:
+        enabled: true
+        service-id: springcloud-config-server-with-eureka#服务发现的生产者
+      #username:  #如果Config Server需要认证的话就需要加上去
+      #password:
+
+eureka-server:
+  hostname: 127.0.0.1
+  port: 8761
+  security:
+    user:
+      name: admin
+      password: admin
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka-server.security.user.name}:${eureka-server.security.user.password}@${eureka-server.hostname}:${eureka-server.port}/eureka/
+  instance:
+    prefer-ip-address: true

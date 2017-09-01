@@ -20,10 +20,12 @@
     <modules>
         <module>springcloud-config-client</module>
         <module>springcloud-config-client-security</module>
+        <module>springcloud-config-client-with-eureka</module>
         <module>springcloud-config-server</module>
         <module>springcloud-config-server-asymmetric-RSA</module>
         <module>springcloud-config-server-symmetric</module>
         <module>springcloud-config-server-security</module>
+        <module>springcloud-config-server-with-eureka</module>
     </modules>
 
     <properties>
