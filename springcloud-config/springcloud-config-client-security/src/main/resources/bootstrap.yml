@@ -8,7 +8,7 @@ spring:
     name: springcloudconfig #对应的配置文件{application}-dev.yml中的{application}部分
   cloud:
     config:
-      uri: http://${config-server-security.user.name}:${config-server-security.user.password}@localhost:8082
+      uri: http://${config-server-security.user.name}:${config-server-security.user.password}@localhost:8090
       profile: dev  #匹配到的配置文件
       label: master #当Config server的后端存储方式为git的时候，默认就是master
 

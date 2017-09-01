@@ -10,12 +10,12 @@
     </parent>
 
     <groupId>com.xuliugen.springcloud</groupId>
-    <artifactId>springcloud-config-server-rsa</artifactId>
+    <artifactId>springcloud-config-server-asymmetric-RSA</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>springcloud-config-server-rsa</name>
-    <description>springcloud-config-server-rsa</description>
+    <name>springcloud-config-server-asymmetric-RSA</name>
+    <description>springcloud-config-server-asymmetric-RSA</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

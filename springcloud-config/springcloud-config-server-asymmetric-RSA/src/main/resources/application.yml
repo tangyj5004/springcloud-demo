@@ -8,7 +8,7 @@ spring:
     config:
       server:
         git:
-          uri: https://git.oschina.net/xuliugen/spring-cloud-config #这里类似于公用的，用于回退查找
+          uri: https://github.com/xuliugen/spring-cloud-config.git #这里类似于公用的，用于回退查找
           search-paths: configs
 
 #使用Dalston.SR2或者Dalston.SR3会报错

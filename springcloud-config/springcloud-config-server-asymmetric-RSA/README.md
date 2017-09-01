@@ -64,13 +64,23 @@ keytool -genkeypair [OPTION]...
 ```
 >4、使用curl生成秘钥：curl -X POST http://localhost:8090/encrypt -d abc, 要加密的内容内容是abc，生成结果如下：
 ```
-753AQABl+GoElKXC/j0pSQ8C7tfccLVYrWehxp30HcETe8BpN7nXUa7JJpfHfehVJ1gcBPf3rsh8rY+S95cujck8ciyvnh
-cn+MkY4GGzjYcDRyQjIrE/nxAUIIUvbkNg2IyKxczbUBE43vprDDoj80ZGLREV0sySAS2dEMi6K/+lhSKfkWJkyurS+xAQ
-bf3TtLSQZOOKO+VlhVQoewlk5oZx94U3ujKMlfMma5kx1ISJvFDwFU5hr3YcbIpeRLEwsywJjgqGTHBO60Q0z5db1AvPMwz
-g/wNkAj9b+dFmiaSMYpm9dU1bmtzrR5yY/uXQGn1tPpu3P+PYN7oUX6GuVriwU+Q+vYIb9NDI3a6d1mQvTl4FZH1uC/wVtu
-ym5WZJk1Y+vs=
+C:\Users\xuliu\Downloads\curl-7.55.1-win64-mingw\bin>curl.exe -X POST http://localhost:8090/encrypt -d abc
+AQCjyWQKnAiG53texg4yWdo8kW7+uFMFZAsbdLT/0sY8sGO1zGVwj47Rf+5t+l5ulsVY6U40BkjzGmF6bC5WKVVhUoU5QQV96Q/iAbaKYjz77nPBmyzmjOTzWkWBvj2Z7E/hO+RTEcSlMPE+txl5AFEXkZqUlzg2KSC+z26aKamgjKoufpNnzEPVwsACaml3k4rhU26SibUfJ9A7UZo3YMqjqqmnrbEvic9/Gb+nZWZFHgCPsSxcmWc82FrObjfK7BZGAQsEynLOEIeG0in8HLD0AHOV8/Y9AWhnXUI8gaq1mjP+P2xWXXMrLok9BKq+ox5hntcgS984m8IE1HAtDRPRttx89IES4AM/BQHs9Mt4lqGCrl7a8Hl/RbgXFp6aQQw=
 ```
 
+注意：如果实在Windows平台下使用的话，要是用windows下的cmd请求curl，这就需要下载curl工具，因为修改的jdk是在windows平台下的，否则结果不正确。
+
 >5、将内容存放到git仓库中
+
+如果是application.yml类型的文件，格式如下,要加引号：
+
+```
+profile : '{cipher}AQCb2gXCI2n7qN+86eITodzGmx+d6zm/oJSV3412iD/61fiQaVZlYXelTmRkVtiKfP3MMan0zQqGYMsj8cAIVGbQ2XMTCj8c8ibDUpUgLGEB+xoR/Elt2OsFP0s2fKejyNRaQoB/VjosrJybjSgwXTYR/SsSdhLohfJqxrw9bn6h/yGv4IOIdkNTPcWFx484/2K4nDq6iXV/y3Zi78frut1WFco3zR0RJrl42nH89TsL3Kt11Eh4BRwQZlXPKmXyhCbFdhBXLxx6Bp3/peVkxoj5hizqb+xIurwlmK6+BJKUhuV1HkOcdmG4+RkqoNDzjcWQGBhsyvoaziIN8NZKeFgsIfpgVn/Ezbn95By8dLqbkDNPTgrK4F0FDTAJfAjLvCk='
+```
+
+如果是application.properties类型的文件，格式如下,不加引号：
+```
+profile : {cipher}AQCb2gXCI2n7qN+86eITodzGmx+d6zm/oJSV3412iD/61fiQaVZlYXelTmRkVtiKfP3MMan0zQqGYMsj8cAIVGbQ2XMTCj8c8ibDUpUgLGEB+xoR/Elt2OsFP0s2fKejyNRaQoB/VjosrJybjSgwXTYR/SsSdhLohfJqxrw9bn6h/yGv4IOIdkNTPcWFx484/2K4nDq6iXV/y3Zi78frut1WFco3zR0RJrl42nH89TsL3Kt11Eh4BRwQZlXPKmXyhCbFdhBXLxx6Bp3/peVkxoj5hizqb+xIurwlmK6+BJKUhuV1HkOcdmG4+RkqoNDzjcWQGBhsyvoaziIN8NZKeFgsIfpgVn/Ezbn95By8dLqbkDNPTgrK4F0FDTAJfAjLvCk=
+```
 
 >5、config client直接可以访问:

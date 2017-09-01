@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8090
 
 spring:
   application:
@@ -10,6 +10,8 @@ spring:
         git:
           uri: https://git.oschina.net/xuliugen/spring-cloud-config #这里类似于公用的，用于回退查找
           search-paths: configs
+#        encrypt:
+#          enabled: false
 
 
 #请求地址：http://localhost:8080/springcloudconfig/dev/master

@@ -1,0 +1,15 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: spring-cloud-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/xuliugen/spring-cloud-config #这里类似于公用的，用于回退查找
+          search-paths: configs
+
+encrypt:
+  key: www.123xuliugen..  #设置的对称秘钥
