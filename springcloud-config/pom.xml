@@ -19,6 +19,7 @@
 
     <modules>
         <module>springcloud-config-client</module>
+        <module>springcloud-config-client-refresh</module>
         <module>springcloud-config-client-security</module>
         <module>springcloud-config-client-with-eureka</module>
         <module>springcloud-config-server</module>
